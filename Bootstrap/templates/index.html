@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<title>WebD</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin: 0px">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      	</button>
+					<a class="navbar-brand" href="#">Utkarsh here</a>
+				</div>
+
+				<div class="collapse navbar-collapse navbar-right" id="bs-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="/contact">Contact us</a></li>
+						<li><a href="/blog">Blog</a></li>
+						<li class="dropdown">
+			           <a href="/" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+			           <ul class="dropdown-menu">
+				            <li><a href="#">Action</a></li>
+				            <li><a href="#">Another action</a></li>
+				            <li><a href="#">Something else here</a></li>
+				            <li class="divider"></li>
+				            <li><a href="#">Separated link</a></li>
+				            <li class="divider"></li>
+				            <li><a href="#">One more separated link</a></li>
+			           </ul>
+		        	</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+<div class="jumbotron">
+			<div class="container">
+				<img src=static/img/cover.jpg width="35%" class="img-responsive pull-right img-rounded">
+				<h2>Hello from the other side of the web</h2>
+				<p>Web design is an inevitable need of every one of either directly or indirectly. Blah blah blah blah blah blah blah blah blah blah blah blah blah lah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+				<p><a class="btn btn-primary btn-md" role="button">Learn more</a></p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<h3>Title 1</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula. Pellentesque aliquam quam vel dolor. Nunc adipiscing. Sed quam odio, tempus ac, aliquam molestie, varius ac, tellus. Vestibulum ut nulla aliquam risus rutrum interdum. Pellentesque lorem. Curabitur sit amet erat quis risus feugiat viverra. Pellentesque augue justo, sagittis et, lacinia at, venenatis non, arcu. Nunc nec libero. </p>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<h3>Title 2</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula. Pellentesque aliquam quam vel dolor. Nunc adipiscing. Sed quam odio, tempus ac, aliquam molestie, varius ac, tellus. Vestibulum ut nulla aliquam risus rutrum interdum. Pellentesque lorem. Curabitur sit amet erat quis risus feugiat viverra. Pellentesque augue justo, sagittis et, lacinia at, venenatis non, arcu. Nunc nec libero.</p>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<h3>Title 3</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula. Pellentesque aliquam quam vel dolor. Nunc adipiscing. Sed quam odio, tempus ac, aliquam molestie, varius ac, tellus. Vestibulum ut nulla aliquam risus rutrum interdum. Pellentesque lorem. Curabitur sit amet erat quis risus feugiat viverra. Pellentesque augue justo, sagittis et, lacinia at, venenatis non, arcu. Nunc nec libero.</p>
+				</div>
+			</div>
+		</div>
+		<div class="container" style="margin-top: 20px">
+			<div class="row">
+			<div class="col-md-4">
+			<div class="panel panel-default">
+			<div class="panel-body">				
+					<img src="static/img/webd1.png">
+					<h4>Fruits</h4>
+					<ul>
+						<li>Apple</li>
+						<li>Orange</li>
+						<li>Mango</li>
+						<li>banana</li>
+					</ul>
+					<a href="#" class="btn btn-default">Read more</a>
+				</div>
+			</div></div>
+			<div class="col-md-4">
+			<div class="panel panel-default">
+			<div class="panel-body">
+					<img src="static/img/webd2.png">
+					<h4>Fruits</h4>
+					<ul>
+						<li>Apple</li>
+						<li>Orange</li>
+						<li>Mango</li>
+						<li>banana</li>
+					</ul>
+					<a href="#" class="btn btn-primary">Read more</a>
+				</div>
+			</div></div>
+
+			<div class="col-md-4">
+			<div class="panel panel-default">
+			<div class="panel-body">
+					<img src="static/img/webd3.png" width="60%">
+							<h4>Fruits</h4>
+					<ul>
+						<li>Apple</li>
+						<li>Orange</li>
+						<li>Mango</li>
+						<li>banana</li>
+					</ul>
+					<button id="btnwdm" name="btnwdm" class="btn btn-success">Sign up</button>					
+				</div>
+			</div></div>
+			</div>
+		</div>
+	</div>		
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row">
+				<div class="col-md-5">
+				<h4>Contact address</h4>
+				<address>
+					B-201,CGRC,<br>
+					New Delhi,<br>
+					India.
+				</address></div>
+				</div>
+				<div class="bottom-footer">
+				<div class="col-md-5">© Copyright WebDevMentors 2017.</div>
+				<div class="col-md-7">
+					<ul class="footer-nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/blog">Blog</a></li>
+						<li><a href="/contact">Contact us</a></li>
+						<li><a href="#">Link</a></li>
+					</ul>
+				</div>					
+				</div>
+			</div>
+		</footer>
+		<script src="static/js/jquery.js"></script>
+		<script src="static/js/bootstrap.min.js"></script>
+	</body>
+</html>

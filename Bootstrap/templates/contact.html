@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<title>WebD</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 50px">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      	</button>
+					<a class="navbar-brand" href="#">Utkarsh here</a>
+				</div>
+
+				<div class="collapse navbar-collapse navbar-right" id="bs-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="/contact">Contact us</a></li>
+						<li><a href="/blog">Blog</a></li>
+						<li class="dropdown">
+			           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+			           <ul class="dropdown-menu">
+				            <li><a href="#">Action</a></li>
+				            <li><a href="#">Another action</a></li>
+				            <li><a href="#">Something else here</a></li>
+				            <li class="divider"></li>
+				            <li><a href="#">Separated link</a></li>
+				            <li class="divider"></li>
+				            <li><a href="#">One more separated link</a></li>
+			           </ul>
+		        	</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="panel-title"><h4>Contact Address</h4></div>
+					</div>
+					<div class="panel-body">
+					<address>
+					<strong>Prasad's residence,</strong><br>
+					B-201,CGRC,<br>
+					New Delhi,<br>
+					India.
+				</address>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-7">
+					<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="panel-title"><h4>Contact Form</h4></div>
+					</div>
+					<div class="panel-body">
+					<form method="post" id="contactform" action="" role="form">
+						  <div class="form-group">
+						    <label for="contactname" >Name</label>
+						    <input type="text" class="form-control" id="contactname" placeholder="Enter Name">
+						  </div>
+						  <div class="form-group">
+						    <label for="contactemail">Email Address</label>
+						    <input type="email" class="form-control" id="contactemail" placeholder="Enter Email">
+						    <span class="help-block">A confirmation link will be sent to this email address</span>
+						  </div>
+						  <div class="form-group">
+						    <label for="contactsubject">Subject</label>
+						    <input type="text" class="form-control input-lg" id="contactsubject" placeholder="Enter Subject">
+						  </div>
+						  <div class="form-group">
+						  	<label for="contactemessage" >Message</label>
+						  	<textarea class="form-control" rows="6" id="contactemessage"></textarea>
+
+						  </div>
+						  
+						  <button type="button" id="contactbtn" class="btn btn-default">Submit</button>
+					</form>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<footer class="site-footer">
+			<div class="container">
+				<div class="row">
+				<div class="col-md-5">
+				<h4>Contact address</h4>
+				<address>
+					B-201,CGRC,<br>
+					New Delhi,<br>
+					India.
+				</address></div>
+				</div>
+				<div class="bottom-footer">
+				<div class="col-md-5">© Copyright WebDevMentors 2017.</div>
+				<div class="col-md-7">
+					<ul class="footer-nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/blog">Blog</a></li>
+						<li><a href="/contact">Contact us</a></li>
+						<li><a href="#">Link</a></li>
+					</ul>
+				</div>					
+				</div>
+			</div>
+		</footer>
+		<script src="static/js/jquery.js"></script>
+		<script src="static/js/bootstrap.min.js"></script>
+		<script>
+		function validateText(id)
+		{
+			if($("#"+id).val()==null || $("#"+id).val()=="")
+			{
+				var div = $("#"+id).closest("div");
+				div.removeClass("has-success");
+				$("#glypcn"+id).remove();				
+				div.addClass("has-error has-feedback");		
+				div.append('<span id="glypcn'+id+'" class="glyphicon glyphicon-remove form-control-feedback"></span>');
+				return false;
+			}
+			else
+			{
+				var div = $("#"+id).closest("div");
+				div.removeClass("has-error");
+				div.addClass("has-success has-feedback");
+				$("#glypcn"+id).remove();
+				div.append('<span id="glypcn'+id+'" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+				return true;
+			}
+		}
+
+
+		$(document).ready(
+
+				function()
+				{
+					$("#contactbtn").click(function()
+
+					{
+						if(!validateText("contactname"))
+						{
+							return false;
+						}
+
+						if(!validateText("contactemail"))
+						{
+							return false;
+						}
+
+						if(!validateText("contactsubject"))
+						{
+							return false;
+						}
+
+						if(!validateText("contactemessage"))
+						{
+							return false;
+						}
+
+						$("form#contactform").submit();
+
+					});
+				}
+			);		
+		</script>
+	</body>
+</html>
